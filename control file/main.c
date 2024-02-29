@@ -31,7 +31,7 @@ int main() {
     fscanf_s(file, "%s", name, sizeof(name));
     printf("Name: %s\n", name);
 
-    fscanf_s(file, " %c", &ch, sizeof(ch));
+    fscanf_s(file, " %c", &ch, 1);
     printf("Character: %c\n", ch);
 
     fgets(str, sizeof(str), file);
@@ -42,3 +42,24 @@ int main() {
 
     return 0;
 }
+
+//#include<stdio.h>
+//
+//int main(void)
+//{
+//	FILE* file = fopen("test.text", "w");
+//	if (file == NULL)
+//	{
+//		printf("default!!!");
+//		return 1;
+//	}
+//	fprintf(file, "Hello world!");
+//	
+//	fclose(file);
+//
+//	FILE* fp = fopen("test.text", "r");
+//	char arr[50];
+//	fscanf_s(fp, "%s", arr, sizeof(arr));
+//	printf("all thing is well\narr = %s", arr);
+//	return 0;
+//}
